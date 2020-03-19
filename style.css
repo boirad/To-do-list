@@ -1,0 +1,330 @@
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* HANDLER */
+
+#handler {
+    width: 100%;
+    height: 5vh;
+    background-color: #00800091;
+    color: whitesmoke;
+    display: inline-flex;
+}
+
+#handler > i {
+    font-size: 26px;
+    padding-top: 13px;
+    padding-left: 22px;
+    cursor: pointer;
+}
+
+#handler > i:hover {
+    color: teal;
+}
+
+#handler > h1 {
+    padding: 5px;
+    margin-left: 64px;
+}
+
+/* MAIN AREA */
+
+#container {
+    width: 100%;
+    height: 95vh;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#navTask {
+    margin-left: 0;
+    margin-top: 0;
+    height: 95vh;
+    min-width: 67px;
+    background-color: #54a16b8f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#navList {
+    list-style: none;
+}
+
+#navList li {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+#navList li:first-child {
+   margin-top: 20px;
+}
+
+nav > #navList li:hover {
+    background-color: #00800033;
+    color: teal;
+
+}
+
+hr {
+    margin-top: 20px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#projectList {
+    list-style: none;
+}
+
+#projectList li:first-child {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 19px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#contentContainer {
+    width: 100%;
+    background-color: #00800030;
+}
+
+#taskContainer {
+    height: 91vh;
+    margin: 20px;
+    width: 98%;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 2px -3px 23px -16px rgba(44,84,57,1);
+    -moz-box-shadow: 2px -3px 23px -16px rgba(44,84,57,1);
+    box-shadow: 2px -3px 23px -16px rgba(44,84,57,1);
+}
+
+#taskBox > p {
+    padding-top: 200px;
+    text-align: center;
+    font-size: 30px;
+    color: darkgray;
+}
+
+#taskBox {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+}
+
+#newTaskDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#newTask {
+    width: 190px;
+    padding-top: 30px;
+    padding-right: 60px;
+    font-size: 30px;
+    color: darkgray;
+    cursor: pointer;
+}
+
+
+/* ADD TASK */
+
+#addTaskContainer {
+    background-color: transparent;
+    width: 30%;
+    height: 50vh;
+    position: fixed;
+    top: 293px;
+    left: 750px;
+}
+
+#titleDiv {
+    width: 100%;
+    text-align: center;
+}
+
+#addTaskTitle {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#closeIconTask {
+    margin-right: 2px;
+    margin-bottom: -18px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#addTaskForm {
+    margin: 20px auto;
+    width: 98%;
+    height: 75%;
+    min-width: 500px;
+    min-height: 352px;
+    background-color: #00800091;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid green;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+label {
+    font-size: 23px;
+}
+
+
+input[type = text] {
+    width: 60%;
+}
+
+textarea {
+    width: 246px;
+    margin-left: -24px;
+    resize: none;
+}
+
+select {
+    width: 258px;
+    text-align: center;
+}
+
+#submitTask {
+    width: 100px;
+    margin: 40px auto;
+}
+
+
+
+
+/* ADD lIST */
+
+#addListContainer {
+    position: fixed;
+    top: 293px;
+    left: 650px;
+    width: 40%;
+    background-color: transparent;
+}
+
+#addListForm {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background-color: #00800091;
+    border: 5px solid green;
+    border-radius: 5px;
+    color: white;
+}
+
+#titleListDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#addListTitle {
+    padding: 20px 0;
+}
+
+#closeIconList {
+    margin-right: 2px;
+    margin-bottom: -28px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#listNameDiv {
+    margin-bottom: 30px;
+}
+
+#submitList {
+    margin-bottom: 20px;
+}
+
+/* CLASSES */
+
+.navTaskOpen {
+    width: 10%;
+}
+
+.navTaskClosed {
+    width: 3.5%;
+}
+
+.taskFormElement {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+
+.none {
+    pointer-events: none;
+}
+
+.taskField {
+    background-color: #54a16b8f;
+    width: 98%;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+}
+
+.taskFieldName {
+    position: absolute;
+    left: 269px;
+    padding-top: 17px;
+}
+
+.taskFieldDescription {
+    position: absolute;
+    left: 569px;
+    padding-top: 17px;
+}
+
+.taskFieldPriority {
+    position: absolute;
+    left: 1456px;
+    padding-top: 17px;
+}
+
+.closeIconTaskField {
+    position: absolute;
+    right: 45px;
+    padding-top: 17px;
+    cursor: pointer;
+}
+
+.doneCheckBox {
+    position: absolute;
+    left: 230px;
+    margin-top: 20px;
+}
+
+.done {
+    text-decoration: line-through;
+}
